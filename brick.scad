@@ -213,7 +213,7 @@ module block(
 
                     if (type != "baseplate" && (real_width == 1 || real_length == 1) && real_width != real_length && !real_dual_sided && roof_thickness < block_height * height) {
                         // Pins
-                        if(type != "tile" || real_reinforcement){
+                        if(!real_reinforcement){
                             if (real_width == 1) {
                                 translate([(pin_diameter/2) + (overall_length - total_pins_length) / 2, overall_width/2, 0]) {
                                     for (xcount=[1:real_length-1]) {
@@ -719,4 +719,5 @@ module block(
 //     translate([8 * y, 8 * x, z * 9.6]) children();
 // }
 
-block(2, 2, 1, shape="cylinder");
+// block(2, 2, 1, shape="cylinder");
+block(2, 1, 1/3, type="tile");

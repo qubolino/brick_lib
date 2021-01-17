@@ -25,7 +25,7 @@ STUD_SCALE_SIDE = 1.0;
 STUD_SCALE_DOWN = 1.0;
 SPLINE_SCALE_DOWN = 0.5;
 SPLINE_SCALE_UP = 1.0;
-SPLINE_SCALE_SIDE = 1.0;
+SPLINE_SCALE_SIDE = 0.5;
 
 module uncenter(width, length, height) {
     translate([((8 * length) / 2), ((8 * width) / 2), height ? ((8 * height) / 2) : 0]) children();
